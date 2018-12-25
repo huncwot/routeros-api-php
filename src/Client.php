@@ -285,7 +285,7 @@ class Client implements Interfaces\ClientInterface
      */
     private function pregResponse(string $value, &$matches)
     {
-        preg_match_all('/^[=|\.](.*)=(.*)/', $value, $matches);
+        preg_match_all('/^=([^=]+)=(.*)$/sS', $value, $matches);
     }
 
     /**
